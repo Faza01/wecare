@@ -19,23 +19,32 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 150),
-
-            Container(
-              child: Center(
-                child: Image(image: AssetImage('assets/wecare.png')),
-              ),
-            ),
-
-            SizedBox(height: 21),
+            SizedBox(height: 100),
             // we care
+
             Text(
-              'Login to your Account',
+              'Create your Account',
               style: TextStyle(
                   fontSize: 15,
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                   fontFamily: 'Poppins'),
+            ),
+
+            SizedBox(height: 14),
+            // username
+            TextField(
+              style: TextStyle(
+                  fontSize: 15,
+                  fontFamily: 'Poppins',
+                  color: Color(0xff545050)),
+              decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.white,
+                  hoverColor: Colors.white,
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10)),
+                  hintText: 'Username'),
             ),
 
             SizedBox(height: 14),
@@ -73,42 +82,18 @@ class _LoginPageState extends State<LoginPage> {
             SizedBox(height: 14),
             //button
 
-            Padding(
-              padding: const EdgeInsets.symmetric(),
-              child: Container(
-                padding: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    color: Color(0xff3B91CF),
-                    borderRadius: BorderRadius.circular(10)),
-                child: Center(
-                  child: Text(
-                    'SIGN IN',
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Poppins',
-                    ),
-                  ),
-                ),
-              ),
-            ),
-
-            // sign up
-            SizedBox(height: 24),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Don't have an account?",
+                  "Already have an account?",
                   style: TextStyle(
                       fontSize: 14,
                       color: Color(0xffA7A5A5),
                       fontFamily: 'Poppins'),
                 ),
                 Text(
-                  " Sign Up",
+                  " Sign In",
                   style: TextStyle(
                       fontSize: 14,
                       color: Color(0xff3B91CF),
@@ -117,14 +102,13 @@ class _LoginPageState extends State<LoginPage> {
                 )
               ],
             ),
-
             // sign in with
             SizedBox(height: 21),
 
             Container(
               child: Center(
                 child: Text(
-                  "---------- or sign in with -----------",
+                  "---------- or sign up with -----------",
                   style: TextStyle(
                       fontSize: 14,
                       color: Color(0xffA7A5A5),
