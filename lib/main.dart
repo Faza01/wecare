@@ -77,22 +77,27 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Card(
                           child: Container(
                             height: 83,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                fit: BoxFit.fill,
-                                image: AssetImage("assets/give.png"),
-                              ),
-                            ),
+                            width: 111,
+                            child: (Image(
+                              image: AssetImage('assets/give.png'),
+                            )),
+                            // decoration: BoxDecoration(
+                            //   image: DecorationImage(
+                            //     image: AssetImage('assets/wecare.png'),
+                            //   ),
+                            // ),
                           ),
                         )),
                     Positioned(
                         top: 15,
+                        left: 143,
                         child: Container(
+                          width: 157,
                           child: Column(children: [
                             Text(
-                              "SIGN IN",
+                              "No one has ever become poor by giving",
                               style: TextStyle(
-                                  fontSize: 15,
+                                  fontSize: 16,
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Poppins'),

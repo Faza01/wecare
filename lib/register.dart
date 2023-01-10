@@ -1,15 +1,17 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:wecare/login.dart';
+import 'package:wecare/main.dart';
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({Key? key}) : super(key: key);
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({Key? key}) : super(key: key);
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,9 +21,16 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 100),
-            // we care
+            SizedBox(height: 30),
 
+            Container(
+              child: Center(
+                child: Image(image: AssetImage('assets/wecare.png')),
+              ),
+            ),
+
+            SizedBox(height: 21),
+            // we care
             Text(
               'Create your Account',
               style: TextStyle(
@@ -79,8 +88,48 @@ class _LoginPageState extends State<LoginPage> {
                   hintText: 'Password'),
             ),
 
-            SizedBox(height: 14),
+            SizedBox(height: 20),
             //button
+            Padding(
+              padding: const EdgeInsets.symmetric(),
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.all(10),
+                    backgroundColor: Color(0xff3B91CF),
+                    minimumSize: Size(340, 20)),
+                child: Text(
+                  'SIGN UP',
+                  style: TextStyle(
+                      fontSize: 16,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'Poppins'),
+                ),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyHomePage()),
+                  );
+                },
+              ),
+              // child: Container(
+              //   padding: EdgeInsets.all(10),
+              //   decoration: BoxDecoration(
+              //       color: Color(0xff3B91CF),
+              //       borderRadius: BorderRadius.circular(10)),
+              //   child: Center(
+              //     child: Text(
+              //       'SIGN IN',
+              //       style: TextStyle(
+              //         fontSize: 16,
+              //         color: Colors.white,
+              //         fontWeight: FontWeight.bold,
+              //         fontFamily: 'Poppins',
+              //       ),
+              //     ),
+              //   ),
+              // ),
+            ),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -92,14 +141,21 @@ class _LoginPageState extends State<LoginPage> {
                       color: Color(0xffA7A5A5),
                       fontFamily: 'Poppins'),
                 ),
-                Text(
-                  " Sign In",
-                  style: TextStyle(
-                      fontSize: 14,
-                      color: Color(0xff3B91CF),
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Poppins'),
-                )
+                TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => LoginPage()),
+                      );
+                    },
+                    child: Text(
+                      "Sign In",
+                      style: TextStyle(
+                          fontSize: 14,
+                          color: Color(0xff3B91CF),
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Poppins'),
+                    ))
               ],
             ),
             // sign in with
