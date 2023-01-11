@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:wecare/login.dart';
-import 'package:wecare/main.dart';
+import 'package:wecare/home.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
@@ -108,7 +108,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MyHomePage()),
+                    MaterialPageRoute(builder: (context) => Home()),
                   );
                 },
               ),

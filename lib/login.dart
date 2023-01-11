@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:wecare/main.dart';
+import 'package:wecare/home.dart';
 import 'package:wecare/register.dart';
 
 class LoginPage extends StatefulWidget {
@@ -92,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => MyHomePage()),
+                    MaterialPageRoute(builder: (context) => Home()),
                   );
                 },
               ),
