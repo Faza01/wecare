@@ -20,24 +20,44 @@ class _DashboardState extends State<Dashboard> {
             children: [
               SizedBox(height: 15),
 
-              // Search Bar
-              TextField(
-                style: TextStyle(
-                    fontSize: 15,
-                    fontFamily: 'Poppins',
-                    color: Color(0xff545050)),
-                decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Color(0xffd9d9d9),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(5),
-                    borderSide: BorderSide.none,
+              Row(
+                // mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image(
+                    image: AssetImage('assets/lg_wecare.png'),
+                    width: 70,
                   ),
-                  hintText: "Search here",
-                  prefixIcon: Icon(Icons.search),
-                  prefixIconColor: Color(0xff000000),
-                ),
+                  // Container(
+                  //   width: 50,
+                  //   height: 50,
+                  //   decoration: BoxDecoration(
+                  //     borderRadius: BorderRadius.circular(10),
+                  //     image: DecorationImage(),
+                  //   ),
+                  // ),
+                  Container(
+                    width: 230,
+                    child: TextField(
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontFamily: 'Poppins',
+                          color: Color(0xff545050)),
+                      decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color(0xffd9d9d9),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(5),
+                          borderSide: BorderSide.none,
+                        ),
+                        hintText: "Search here",
+                        prefixIcon: Icon(Icons.search),
+                        prefixIconColor: Color(0xff000000),
+                      ),
+                    ),
+                  )
+                ],
               ),
+              // Search Bar
 
               SizedBox(height: 20),
               // Box
@@ -62,11 +82,6 @@ class _DashboardState extends State<Dashboard> {
                         child: (Image(
                           image: AssetImage('assets/give.png'),
                         )),
-                        // decoration: BoxDecoration(
-                        //   image: DecorationImage(
-                        //     image: AssetImage('assets/wecare.png'),
-                        //   ),
-                        // ),
                       ),
                     ),
                     Positioned(
@@ -97,10 +112,23 @@ class _DashboardState extends State<Dashboard> {
                 style: TextStyle(fontSize: 12),
               ),
 
-              // // Items Widget
+              //Items Widget
               // ItemsWidget(),
+              // SizedBox(height: 20),
+              // SizedBox(
+              //   height: 10,
+              //   child: GridView.count(
+              //     crossAxisCount: 2,
+              //     children: [
+              //       for (var donation in donations)
+              //         Image.asset('assets/$donations.png ')
+              //     ],
+              //   ),
+              // ),
             ],
           )),
     );
   }
 }
+
+// final donations = ['kakek', 'pasien', 'bayi'];
