@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer__literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:wecare/home.dart';
@@ -22,7 +22,7 @@ class _LoginPageState extends State<LoginPage> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 30),
+                SizedBox(height: 70),
 
                 Container(
                   child: Center(
@@ -43,7 +43,7 @@ class _LoginPageState extends State<LoginPage> {
 
                 SizedBox(height: 14),
                 // email
-                TextField(
+                TextFormField(
                   style: TextStyle(
                       fontSize: 15,
                       fontFamily: 'Poppins',
@@ -54,12 +54,14 @@ class _LoginPageState extends State<LoginPage> {
                       hoverColor: Colors.white,
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      hintText: 'Email'),
+                      hintText: 'Email',
+                      contentPadding: EdgeInsets.symmetric(
+                          vertical: 12.0, horizontal: 10.0)),
                 ),
 
                 SizedBox(height: 14),
                 // password
-                TextField(
+                TextFormField(
                   obscureText: true,
                   style: TextStyle(
                       fontSize: 15,
@@ -71,13 +73,15 @@ class _LoginPageState extends State<LoginPage> {
                       hoverColor: Colors.white,
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      hintText: 'Password'),
+                      hintText: 'Password',
+                      contentPadding: EdgeInsets.symmetric(
+                          vertical: 12.0, horizontal: 10.0)),
                 ),
 
                 SizedBox(height: 14),
                 //button
                 Padding(
-                  padding: const EdgeInsets.symmetric(),
+                  padding: EdgeInsets.symmetric(),
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                         padding: EdgeInsets.all(10),
@@ -98,27 +102,10 @@ class _LoginPageState extends State<LoginPage> {
                       );
                     },
                   ),
-                  // child: Container(
-                  //   padding: EdgeInsets.all(10),
-                  //   decoration: BoxDecoration(
-                  //       color: Color(0xff3B91CF),
-                  //       borderRadius: BorderRadius.circular(10)),
-                  //   child: Center(
-                  //     child: Text(
-                  //       'SIGN IN',
-                  //       style: TextStyle(
-                  //         fontSize: 16,
-                  //         color: Colors.white,
-                  //         fontWeight: FontWeight.bold,
-                  //         fontFamily: 'Poppins',
-                  //       ),
-                  //     ),
-                  //   ),
-                  // ),
                 ),
 
                 // sign up
-                SizedBox(height: 20),
+                SizedBox(height: 10),
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -150,7 +137,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
 
                 // sign in with
-                SizedBox(height: 21),
+                SizedBox(height: 10),
 
                 Container(
                   child: Center(
@@ -164,50 +151,43 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
 
-                // google
+                SizedBox(height: 20),
+
                 Container(
-                  child: Stack(
-                    children: [
-                      Positioned(
-                          child: Material(
-                        child: Container(
-                          height: 43,
-                          decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10)),
-                        ),
-                      )),
-                      Positioned(
-                          top: 9,
-                          left: 10,
-                          child: Card(
-                            child: Container(
-                              height: 83,
+                    height: 43,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                        border: Border.all(
+                          color: Colors.grey,
+                          width: 1,
+                        )),
+                    child: Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Container(
+                              height: 25.0,
+                              width: 25.0,
                               decoration: BoxDecoration(
                                 image: DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: AssetImage("assets/icon google.png"),
-                                ),
+                                    image: AssetImage('assets/ic_google.png'),
+                                    fit: BoxFit.cover),
+                                shape: BoxShape.circle,
                               ),
                             ),
-                          )),
-                      Positioned(
-                          top: 15,
-                          child: Container(
-                            child: Column(children: [
-                              Text(
-                                "SIGN IN",
-                                style: TextStyle(
-                                    fontSize: 15,
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Poppins'),
-                              )
-                            ]),
-                          ))
-                    ],
-                  ),
-                ),
+                            SizedBox(width: 10),
+                            Text(
+                              'Sign in with Google',
+                              style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                  fontFamily: 'Poppins',
+                                  color: Colors.grey),
+                            ),
+                          ],
+                        ))),
               ],
             ),
           )),

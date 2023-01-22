@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:wecare/widgets/ItemsWidget.dart';
 
@@ -20,43 +22,36 @@ class _DashboardState extends State<Dashboard> {
             children: [
               SizedBox(height: 15),
 
-              Row(
-                // mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Image(
-                    image: AssetImage('assets/lg_wecare.png'),
-                    width: 70,
-                  ),
-                  // Container(
-                  //   width: 50,
-                  //   height: 50,
-                  //   decoration: BoxDecoration(
-                  //     borderRadius: BorderRadius.circular(10),
-                  //     image: DecorationImage(),
-                  //   ),
-                  // ),
-                  Container(
-                    width: 230,
-                    child: TextField(
-                      style: TextStyle(
-                          fontSize: 15,
-                          fontFamily: 'Poppins',
-                          color: Color(0xff545050)),
-                      decoration: InputDecoration(
-                        filled: true,
-                        fillColor: Color(0xffd9d9d9),
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(5),
-                          borderSide: BorderSide.none,
-                        ),
-                        hintText: "Search here",
-                        prefixIcon: Icon(Icons.search),
-                        prefixIconColor: Color(0xff000000),
-                      ),
-                    ),
-                  )
-                ],
-              ),
+              // Row(
+              //   // mainAxisAlignment: MainAxisAlignment.start,
+              //   children: [
+              //     Image(
+              //       image: AssetImage('assets/lg_wecare.png'),
+              //       width: 70,
+              //     ),
+              //     Container(
+              //       child: TextField(
+              //         style: TextStyle(
+              //             fontSize: 18,
+              //             fontFamily: 'Poppins',
+              //             color: Color(0xff545050)),
+              //         decoration: InputDecoration(
+              //           filled: true,
+              //           fillColor: Color(0xffd9d9d9),
+              //           border: OutlineInputBorder(
+              //             borderRadius: BorderRadius.circular(5),
+              //             borderSide: BorderSide.none,
+              //           ),
+              //           hintText: "Search here",
+              //           contentPadding:
+              //               const EdgeInsets.symmetric(vertical: 10.0),
+              //           prefixIcon: Icon(Icons.search),
+              //           prefixIconColor: Color(0xff000000),
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
               // Search Bar
 
               SizedBox(height: 20),

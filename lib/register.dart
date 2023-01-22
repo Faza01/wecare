@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
 import 'package:wecare/login.dart';
@@ -22,12 +22,10 @@ class _RegisterPageState extends State<RegisterPage> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 30),
+                SizedBox(height: 50),
 
-                Container(
-                  child: Center(
-                    child: Image(image: AssetImage('assets/wecare.png')),
-                  ),
+                Center(
+                  child: Image(image: AssetImage('assets/wecare.png')),
                 ),
 
                 SizedBox(height: 21),
@@ -43,7 +41,7 @@ class _RegisterPageState extends State<RegisterPage> {
 
                 SizedBox(height: 14),
                 // username
-                TextField(
+                TextFormField(
                   style: TextStyle(
                       fontSize: 15,
                       fontFamily: 'Poppins',
@@ -54,28 +52,33 @@ class _RegisterPageState extends State<RegisterPage> {
                       hoverColor: Colors.white,
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      hintText: 'Username'),
+                      hintText: 'Username',
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 12.0, horizontal: 10.0)),
                 ),
 
                 SizedBox(height: 14),
                 // email
-                TextField(
+                TextFormField(
                   style: TextStyle(
                       fontSize: 15,
                       fontFamily: 'Poppins',
                       color: Color(0xff545050)),
                   decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Colors.white,
-                      hoverColor: Colors.white,
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10)),
-                      hintText: 'Email'),
+                    filled: true,
+                    fillColor: Colors.white,
+                    hoverColor: Colors.white,
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    hintText: 'Email',
+                    contentPadding: const EdgeInsets.symmetric(
+                        vertical: 12.0, horizontal: 10.0),
+                  ),
                 ),
 
                 SizedBox(height: 14),
                 // password
-                TextField(
+                TextFormField(
                   obscureText: true,
                   style: TextStyle(
                       fontSize: 15,
@@ -87,7 +90,9 @@ class _RegisterPageState extends State<RegisterPage> {
                       hoverColor: Colors.white,
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      hintText: 'Password'),
+                      hintText: 'Password',
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 12.0, horizontal: 10.0)),
                 ),
 
                 SizedBox(height: 20),
@@ -133,6 +138,8 @@ class _RegisterPageState extends State<RegisterPage> {
                   // ),
                 ),
 
+                SizedBox(height: 10),
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -162,21 +169,54 @@ class _RegisterPageState extends State<RegisterPage> {
                   ],
                 ),
                 // sign in with
-                SizedBox(height: 21),
+                SizedBox(height: 10),
 
-                Container(
-                  child: Center(
-                    child: Text(
-                      "---------- or sign up with -----------",
-                      style: TextStyle(
-                          fontSize: 14,
-                          color: Color(0xffA7A5A5),
-                          fontFamily: 'Poppins'),
-                    ),
+                Center(
+                  child: Text(
+                    "---------- or sign up with -----------",
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: Color(0xffA7A5A5),
+                        fontFamily: 'Poppins'),
                   ),
                 ),
 
                 // google
+                SizedBox(height: 20),
+
+                Container(
+                    height: 43,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                        border: Border.all(
+                          color: Colors.grey,
+                          width: 1,
+                        )),
+                    child: Center(
+                        child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Container(
+                          height: 25.0,
+                          width: 25.0,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/ic_google.png'),
+                                fit: BoxFit.cover),
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                        Text(
+                          'Sign up with Google',
+                          style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Poppins',
+                              color: Colors.grey),
+                        ),
+                      ],
+                    ))),
               ],
             ),
           )),

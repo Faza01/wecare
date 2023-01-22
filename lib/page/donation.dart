@@ -1,3 +1,5 @@
+// ignore_for_file: prefer__ructors, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:wecare/home.dart';
 
@@ -37,7 +39,7 @@ class _DonationState extends State<Donation> {
               style: TextStyle(fontSize: 12),
             ),
             SizedBox(height: 5),
-            TextField(
+            TextFormField(
               style: TextStyle(
                   fontSize: 15,
                   fontFamily: 'Poppins',
@@ -48,6 +50,8 @@ class _DonationState extends State<Donation> {
                 hoverColor: Colors.white,
                 border:
                     OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
               ),
             ),
             // Description
@@ -59,7 +63,7 @@ class _DonationState extends State<Donation> {
               style: TextStyle(fontSize: 12),
             ),
             SizedBox(height: 5),
-            TextField(
+            TextFormField(
               style: TextStyle(
                   fontSize: 15,
                   fontFamily: 'Poppins',
@@ -70,6 +74,31 @@ class _DonationState extends State<Donation> {
                 hoverColor: Colors.white,
                 border:
                     OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
+              ),
+            ),
+            // Image
+            SizedBox(height: 20),
+            Text.rich(
+              TextSpan(
+                  text: 'Image',
+                  style: TextStyle(fontFamily: 'Poppins', color: Colors.grey)),
+              style: TextStyle(fontSize: 12),
+            ),
+            SizedBox(height: 5),
+            TextFormField(
+              style: TextStyle(
+                  fontSize: 15,
+                  fontFamily: 'Poppins',
+                  color: Color(0xff545050)),
+              decoration: InputDecoration(
+                filled: true,
+                fillColor: Colors.white,
+                hoverColor: Colors.white,
+                border:
+                    OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                hintText: 'image',
               ),
             ),
             // Target
@@ -81,7 +110,7 @@ class _DonationState extends State<Donation> {
               style: TextStyle(fontSize: 12),
             ),
             SizedBox(height: 5),
-            TextField(
+            TextFormField(
               style: TextStyle(
                   fontSize: 15,
                   fontFamily: 'Poppins',
@@ -92,6 +121,8 @@ class _DonationState extends State<Donation> {
                 hoverColor: Colors.white,
                 border:
                     OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
                 hintText: 'Rp.',
               ),
             ),
@@ -104,7 +135,7 @@ class _DonationState extends State<Donation> {
               style: TextStyle(fontSize: 12),
             ),
             SizedBox(height: 5),
-            TextField(
+            TextFormField(
               style: TextStyle(
                   fontSize: 15,
                   fontFamily: 'Poppins',
@@ -115,6 +146,8 @@ class _DonationState extends State<Donation> {
                 hoverColor: Colors.white,
                 border:
                     OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                contentPadding:
+                    EdgeInsets.symmetric(vertical: 15.0, horizontal: 10.0),
               ),
             ),
 
@@ -132,9 +165,9 @@ class _DonationState extends State<Donation> {
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.symmetric(),
+                padding: EdgeInsets.symmetric(),
                 child: Text(
-                  'SIGN IN',
+                  'Galang Dana',
                   style: TextStyle(
                       fontSize: 16,
                       color: Colors.white,
@@ -142,7 +175,9 @@ class _DonationState extends State<Donation> {
                       fontFamily: 'Poppins'),
                 ),
               ),
-            )
+            ),
+
+            SizedBox(height: 20)
           ],
         )),
       ),
