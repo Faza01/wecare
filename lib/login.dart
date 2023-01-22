@@ -24,10 +24,8 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 SizedBox(height: 70),
 
-                Container(
-                  child: Center(
-                    child: Image(image: AssetImage('assets/wecare.png')),
-                  ),
+                Center(
+                  child: Image(image: AssetImage('assets/wecare.png')),
                 ),
 
                 SizedBox(height: 21),
@@ -139,15 +137,13 @@ class _LoginPageState extends State<LoginPage> {
                 // sign in with
                 SizedBox(height: 10),
 
-                Container(
-                  child: Center(
-                    child: Text(
-                      "---------- or sign in with -----------",
-                      style: TextStyle(
-                          fontSize: 14,
-                          color: Color(0xffA7A5A5),
-                          fontFamily: 'Poppins'),
-                    ),
+                Center(
+                  child: Text(
+                    "---------- or sign in with -----------",
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: Color(0xffA7A5A5),
+                        fontFamily: 'Poppins'),
                   ),
                 ),
 
